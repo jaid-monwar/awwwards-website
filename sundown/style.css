@@ -412,21 +412,162 @@ nav h3 {
   flex-direction: column;
   color: white;
   background-color: black;
-  padding: 1vw 3vw;
+  /* padding: 1vw 3vw; */
 }
 
 #footer h1 {
   font-size: 23vw;
+  z-index: 10;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+#footer-shape {
+  position: fixed;
+  width: 150vw;
+  height: 46vw;
+  top: 0;
+  z-index: 11;
+}
+
+#footer-1 {
+  background: linear-gradient(to top, #fd3309, #fe5718);
+  height: 100%;
+  width: 100%;
+
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 20%;
+  position: fixed;
+  z-index: 11;
+  filter: blur(65px);
+  animation-name: footeranime1;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+#footer-2 {
+  background: linear-gradient(to top, #fd3309, #fe5718);
+  height: 100%;
+  width: 100%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 20%;
+  position: absolute;
+  left: 50%;
+  z-index: 11;
+  filter: blur(65px);
+  animation-name: footeranime2;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+#footer-3 {
+  background: linear-gradient(to top, #fd3309, #fe5718);
+  height: 100%;
+  width: 100%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  position: absolute;
+  left: 50%;
+  z-index: 11;
+  filter: blur(65px);
+  animation-name: footeranime3;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-duration: 6.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes footeranime1 {
+  from {
+    transform: translate(-50%, -80%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes footeranime2 {
+  from {
+    transform: translate(-50%, -90%);
+  }
+  to {
+    transform: translate(-50%, -65%);
+  }
+}
+
+@keyframes footeranime3 {
+  from {
+    transform: translate(0%, -50%);
+  }
+  to {
+    transform: translate(-10%, -25%);
+  }
 }
 
 #footer-div {
   height: 20vh;
   width: 100%;
-  background-color: red;
+  /* background-color: red; */
+  padding: 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 12;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+#footer-left {
+  font-size: 2vw;
+  width: 40%;
+  line-height: 2.5vw;
+}
+
+#footer-right {
+  font-weight: 100;
+  font-size: 1.3vw;
+  width: 20%;
+}
+
+#footer-right-bottom {
+  padding-top: 2vw;
+  color: rgba(255, 255, 255, 0.532);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.532);
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-right-bottom img {
+  width: 2vw;
+  height: 2vw;
+  cursor: pointer;
 }
 
 #footer-bottom {
+  /* background-color: green; */
+  margin-bottom: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#footer #footer-bottom {
   border-top: 1px solid #dadada;
   height: 10vh;
   width: 100%;
+}
+
+#footer-bottom-text {
+  font-weight: 100;
+  font-size: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
